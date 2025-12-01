@@ -41,10 +41,10 @@ app.post('/', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Browser Title</title>
+            <title>nodeisbad</title>
         </head>
         <body>
-            <h3 align=center>T2A06-node-codesandbox</h3>
+            <h3 align=center>ihatenode - t2a27-render-node-caleb.html - server.js</h3>
             <form action="/" method="post">
                 <label for="myText01">Enter Text:</label>
                 <input type="text" id="myText01" name="myText01">
