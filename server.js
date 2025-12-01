@@ -1,18 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
-// 1. **CRITICAL FIX:** Use the environment variable $PORT provided by Render,
-//    or default to 3000 for local development.
 const PORT = process.env.PORT || 3000;
-
-// Middleware to parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: true }));
-
-// Handle GET requests (display the form)
 app.get('/', (req, res) => {
-    const checkResult = `<span style='color:red'> Try the magic word "fred"</span>`;
-    // Send the HTML page
+    const checkResult = `<span style='color:red'> Try the magic word "caleb"</span>`;
     res.send(`
         <!DOCTYPE html>
         <html>
@@ -31,24 +23,20 @@ app.get('/', (req, res) => {
         </html>
     `);
 });
-
-// Handle POST requests (process the form submission)
 app.post('/', (req, res) => {
     const myInputText01 = req.body.myText01;
     let myCheck = false;
     let checkResult = '';
 
-    if (myInputText01 === 'fred') {
+    if (myInputText01 === 'caleb') {
         myCheck = true;
     }
 
     if (myCheck) {
         checkResult = `<b style='color:green'> Cool! </b>`;
     } else {
-        checkResult = `<span style='color:red'> Try the magic word "fred"</span>`;
+        checkResult = `<span style='color:red'> Try the magic word "caleb"</span>`;
     }
-    
-    // Re-send the HTML page with the new result
     res.send(`
         <!DOCTYPE html>
         <html>
@@ -67,11 +55,6 @@ app.post('/', (req, res) => {
         </html>
     `);
 });
-
-// 2. **CRITICAL FIX:** Listen on the PORT variable.
 app.listen(PORT, '0.0.0.0', () => {
     console.log(`App listening on port ${PORT}`);
-    // Note: Logging the URL is optional but good practice.
-    // On Render, the host will not be 'localhost' but '0.0.0.0'
-    // or simply the external URL provided by Render.
 });
