@@ -47,7 +47,7 @@ app.post('/', (req, res) => {
             <h3 align=center>ihatenode - t2a27-render-node-caleb.html - server.js</h3>
             <form action="/" method="post">
                 <label for="myText01">Enter Text:</label>
-                <input type="text" id="myText01" name="myText01">
+                <input type="text" id="myText01" name="myText01" value="caleb">
                 <input type="submit" value="Submit">
             </form>
             ${checkResult}
