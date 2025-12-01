@@ -1,7 +1,7 @@
 {
-  "name": "t2a06-node-codesandbox",
+  "name": "t2a27-node-render",
   "version": "1.0.0",
-  "description": "Simple Express server for T2A06",
+  "description": "Simple Express server for T2A27",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
