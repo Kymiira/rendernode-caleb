@@ -9,7 +9,7 @@ app.get('/', (req, res) => {
         <!DOCTYPE html>
         <html>
         <head>
-            <title>Browser Title</title>
+            <title>nodeisbad</title>
         </head>
         <body>
             <h3 align=center>Render-node-backend</h3>
